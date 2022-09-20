@@ -1,6 +1,6 @@
 import javax.script.ScriptException;
 
-public class Extra {
+public class Extra implements Extra2 {
 
     String t1 = "";//like list with numbers
     String t3 = "";
