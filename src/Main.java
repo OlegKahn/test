@@ -2,7 +2,7 @@ import java.util.Scanner;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptEngine;
 import javax.script.ScriptException;
-public class Main extends Extra {
+public class Main {
 
     public static void main(String[] args) throws ScriptException {
         Scanner op = new Scanner(System.in);
