@@ -9,6 +9,7 @@ public void setData(String t0) {
     int n1 = 0;//sign last
     String t2 = "";//like list with sign
     int n2 = 0;//number balancer
+    int n3 = 0;
     int e = 0;//if it's not sign or number
     int n0 = t0.length();
     if (n0 > 9||t0.length()==0)
@@ -33,14 +34,16 @@ public void setData(String t0) {
                 }
                 if (Character.getNumericValue(ch0) == 0) {
                     n2 = n2 - 2;
+                    n3 = n3 + 1;
                 }
                 if (i > 0 && Character.getNumericValue(ch0) == 0) {
                     if (Character.getNumericValue(t0.charAt(i - 1)) == 1) {
                         n2 = n2 + 1;
+                        n3 = n3 + 1;
                     }
                 }
                 t1 = t1 + ch0;
-                n1 = n1 * 0;
+                n1 = 0;
                 if (i != 0) {
                     t2 = t2 + "@";
                 }
@@ -59,8 +62,8 @@ public void setData(String t0) {
                     }
                 }
                 t2 = t2 + t0.charAt(i);
-                // t1 = t1 + "-";
                 n1 = n1 + 1;
+                n3 = 0;
             }
             else
             {
@@ -71,7 +74,7 @@ public void setData(String t0) {
             {
                 break;
             }
-            if (n2 != 0 && n2 != 1)
+            if (n2 != 0 && n2 != 1 || n3 > 2)
             {
                 System.out.println("Error, only numbers 1-10 or interfere extra signs");
                 System.exit(0);
