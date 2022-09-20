@@ -1,0 +1,4 @@
+ interface Extra2 {
+    public void setData(String z);
+    public String getData();
+}
